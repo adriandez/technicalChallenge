@@ -1,11 +1,11 @@
-import Table from "../../pages/Table";
+import Search from "../../pages/Search";
 
 import "./Main.scss";
 
 const Main = () => {
   return (
     <main className="Main">
-        <Table />
+        <Search />
     </main>
   );
 };

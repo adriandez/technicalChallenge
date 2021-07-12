@@ -1,0 +1,182 @@
+[
+  {
+    "item_ID": 1,
+    "name": "Product 2",
+    "relevance": 2,
+    "price": 405.39,
+    "cif": "603515f",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 2,
+    "name": "Product 1",
+    "relevance": 1,
+    "price": 20.99,
+    "cif": "603667p",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 3,
+    "name": "Product 3",
+    "relevance": 3,
+    "price": 21.5,
+    "cif": "103475x",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 4,
+    "name": "Product 4",
+    "relevance": 2,
+    "price": 201.58,
+    "cif": "603667p",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 5,
+    "name": "Product 7",
+    "relevance": 0,
+    "price": 65.59,
+    "cif": "900017c",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 6,
+    "name": "Product 6",
+    "relevance": 2,
+    "price": 25.89,
+    "cif": "603515f",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 7,
+    "name": "Product 8",
+    "relevance": 2,
+    "price": 77.77,
+    "cif": "603667p",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 8,
+    "name": "Product 5",
+    "relevance": 5,
+    "price": 331.78,
+    "cif": "103475x",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 9,
+    "name": "Product 9",
+    "relevance": 3,
+    "price": 87.69,
+    "cif": "403789y",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 10,
+    "name": "Product 10",
+    "relevance": 5,
+    "price": 1000,
+    "cif": "900017c",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 11,
+    "name": "Product 11",
+    "relevance": 3,
+    "price": 880.75,
+    "cif": "603515f",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 12,
+    "name": "Product 12",
+    "relevance": 1,
+    "price": 20.99,
+    "cif": "900017c",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 13,
+    "name": "Product 13",
+    "relevance": 3,
+    "price": 21.5,
+    "cif": "603667p",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 14,
+    "name": "Product 14",
+    "relevance": 2,
+    "price": 201.58,
+    "cif": "403789y",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 15,
+    "name": "Product 15",
+    "relevance": 5,
+    "price": 331.78,
+    "cif": "103475x",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 16,
+    "name": "Product 16",
+    "relevance": 2,
+    "price": 25.89,
+    "cif": "603667p",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 17,
+    "name": "Product 17",
+    "relevance": 0,
+    "price": 65.59,
+    "cif": "403789y",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 18,
+    "name": "Product 18",
+    "relevance": 2,
+    "price": 77.77,
+    "cif": "403789y",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 19,
+    "name": "Product 19",
+    "relevance": 3,
+    "price": 87.69,
+    "cif": "900017c",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "item_ID": 20,
+    "name": "Product 20",
+    "relevance": 5,
+    "price": 1000,
+    "cif": "403789y",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  }
+]
