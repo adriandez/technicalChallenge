@@ -24,8 +24,6 @@ const Table = () => {
     page,
     nextPage,
     previousPage,
-    canNextPage,
-    canPreviousPage,
     pageOptions,
     state,
     prepareRow,
