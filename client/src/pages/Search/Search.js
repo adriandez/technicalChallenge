@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 //import { GlobalContext } from "../../context/GlobalContext";
-import useAxios from "../../hooks/useAxios";
+//import useAxios from "../../hooks/useAxios";
 import useDebounce, { debounce } from "../../hooks/debaunce";
 
 import Table from "./Table";
@@ -8,11 +8,11 @@ import Table from "./Table";
 import "./Search.scss";
 
 const Search = () => {
-  const [input, setInput] = useState("/api");
+  const [input, setInput] = useState("");
   // eslint-disable-next-line
   //const [global, setGlobal] = useContext(GlobalContext);
   const [url, setUrl] = useState("");
-  const { loading, result } = useAxios(url);
+  //const { loading, result } = useAxios(url);
 
   
 
@@ -29,28 +29,20 @@ const Search = () => {
 //     global.map((global, index) => <Table global={global} key={index} />);
 
   useEffect(() => {
-     
     if (input) setUrl(`${input}`);
   }, [input]);
 
-  useEffect(() => {
-       console.log(result);
-       console.log(loading);
+  // useEffect(() => {
+       //console.log(result);
+       //console.log(loading);
 //     if (result) {
 //       setGlobal([...global, result]);
 //     }
 //     // eslint-disable-next-line
-  }, [result]);
+  // }, [result]);
 
   return (
-    <section className="PokemonList">
-      <input
-        type="text"
-        name="input"
-        placeholder="Item"
-        onChange={handleChange}
-      />
-      {/* {loading ? <p>Loading...</p> : paintCards()} */}
+    <section className="Search">
       <Table />
     </section>
   );

@@ -1,12 +1,11 @@
 
+import Nav from './Nav'
 import "./Header.scss";
 
 const Header = () => {
   return (
     <header className="Header">
-      <div className="head-div">
-          <p>Header</p>
-      </div>
+          <h2>Online Store</h2>
     </header>
   );
 };
