@@ -1,0 +1,26 @@
+$color-primary: #000000;
+$color-primary-light: #c9c9c9;
+$color-primary-dark: #000000;
+$color-bg: #ffffff;
+$color-type-light: #dddddd;
+
+button,
+input[type="submit"] {
+  justify-self: flex-end;
+  align-self: flex-start;
+  background: $color-primary;
+
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+
+input[type="text"] {
+  background: white;
+  padding: 6px;
+  color: $color-bg;
+  &::placeholder {
+    color: black;
+  }
+}
+

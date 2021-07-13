@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  max-height: 55px;
+  background: rgb(0, 0, 0);
+}
+
+h2 {
+
+  color: white;
+}
+
+
+header > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

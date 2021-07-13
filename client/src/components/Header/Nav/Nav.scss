@@ -1,0 +1,19 @@
+.Nav {
+  svg.MuiSvgIcon-root {
+    font-size: 1.8rem;
+  }
+  > div {
+    align-self: flex-end;
+
+    > button {
+      color: white;
+    }
+  }
+}
+span.MuiButton-label > svg > path {
+  color: white;
+}
+
+div.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorTop.MuiPaper-elevation16 {
+  top: 101px;
+}

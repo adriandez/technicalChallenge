@@ -1,0 +1,12 @@
+.Top {
+  display: flex;
+  justify-content: center;
+  min-height: 30px;
+  max-height: 110px;
+  background: red;
+  svg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 90px;
+  }
+}

@@ -23,7 +23,7 @@ app.use("/api", routerApi); // rutas para API
   // Conexion a base de datos
   // force: true => DROP TABLES
   sequelize
-    .sync({ force: true })
+    .sync({ force: false })
     .then(() => {
       console.log("Connected to DB");
       app.listen(process.env.PORT, () => {
