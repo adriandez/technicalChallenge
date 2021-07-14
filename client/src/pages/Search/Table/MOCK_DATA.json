@@ -1,19 +1,19 @@
 [
   {
     "item_ID": 1,
-    "name": "Product 2",
-    "relevance": 2,
-    "price": 405.39,
-    "cif": "603515f",
+    "name": "Product 1",
+    "relevance": 1,
+    "price": 20.99,
+    "cif": "603667p",
     "createdAt": "2021-07-12T13:51:30.000Z",
     "updatedAt": "2021-07-12T13:51:30.000Z"
   },
   {
     "item_ID": 2,
-    "name": "Product 1",
-    "relevance": 1,
-    "price": 20.99,
-    "cif": "603667p",
+    "name": "Product 2",
+    "relevance": 2,
+    "price": 405.39,
+    "cif": "603515f",
     "createdAt": "2021-07-12T13:51:30.000Z",
     "updatedAt": "2021-07-12T13:51:30.000Z"
   },

@@ -9,13 +9,13 @@ export const GlobalFilter = ({ filter, setFilter }) => {
   return (
     <span>
       <input
-      type="text"
+        type="text"
         value={value || ""}
         onChange={(e) => {
           setValue(e.target.value);
           onChange(e.target.value);
         }}
-        placeHolder="Filter by the product info."
+        placeholder="Filter by product info"
       />
     </span>
   );

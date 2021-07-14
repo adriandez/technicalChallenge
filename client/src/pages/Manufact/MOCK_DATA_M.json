@@ -1,0 +1,42 @@
+[
+  {
+    "manufact_ID": 1,
+    "name": "Manufact 1",
+    "cif": "603515f",
+    "address": "Calle 1, 33",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "manufact_ID": 2,
+    "name": "Manufact 2",
+    "cif": "900017c",
+    "address": "Calle 1, 33",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "manufact_ID": 3,
+    "name": "Manufact 3",
+    "cif": "103475x",
+    "address": "Calle 1, 33",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "manufact_ID": 4,
+    "name": "Manufact 4",
+    "cif": "403789y",
+    "address": "Calle 1, 33",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  },
+  {
+    "manufact_ID": 5,
+    "name": "Manufact 7",
+    "cif": "603667p",
+    "address": "Calle 1, 33",
+    "createdAt": "2021-07-12T13:51:30.000Z",
+    "updatedAt": "2021-07-12T13:51:30.000Z"
+  }
+]

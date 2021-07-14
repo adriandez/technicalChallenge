@@ -52,3 +52,9 @@ Table th, tfoot td {
 .MuiSvgIcon-root sort {
   font-size: 5px;
 }
+
+#root > div > main > section > div > span {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}

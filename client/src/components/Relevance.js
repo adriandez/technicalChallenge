@@ -6,7 +6,6 @@ const Star = ({ selected = false, onSelect }) => (
 );
 
 const StarRating = ({ totalStars, selected }) => {
-  console.log(selected);
   return createArray(totalStars).map((n, i) => (
     <Star key={i} selected={selected > i} />
   ));
