@@ -1,3 +1,10 @@
+$viewport-phone: 300px;
+$viewport-tablet: 564px;
+$viewport-desktop: 960px;
+
+.App {
+  min-width: $viewport-phone;
+}
 
 input[type="text"] {
   width: 95%;
@@ -7,34 +14,40 @@ input[type="text"] {
   &::placeholder {
     color: black;
   }
-}
-
-$viewport-phone: 300px;
-$viewport-tablet: 564px;
-$viewport-desktop: 960px;
-
-
-
-@media screen and (min-width: $viewport-tablet + 1px) and (max-width: $viewport-desktop - 1px) {
-input[type="text"] {
-  width: 97%;
-  background: white;
-  padding: 6px;
-  color: black;
-  &::placeholder {
-    color: black;
+  &:focus {
+    outline: none !important;
+    border: 1px solid rgb(255, 255, 0);
   }
 }
+
+@media screen and (min-width: $viewport-tablet + 1px) and (max-width: $viewport-desktop - 1px) {
+  input[type="text"] {
+    width: 97%;
+    background: white;
+    padding: 6px;
+    color: black;
+    &::placeholder {
+      color: black;
+    }
+    &:focus {
+      outline: none !important;
+      border: 1px solid rgb(255, 255, 0);
+    }
+  }
 }
 
 @media screen and (min-width: $viewport-desktop + 1) {
-input[type="text"] {
-  width: 99%;
-  background: white;
-  padding: 6px;
-  color: black;
-  &::placeholder {
+  input[type="text"] {
+    width: 99%;
+    background: white;
+    padding: 6px;
     color: black;
+    &::placeholder {
+      color: black;
+    }
+    &:focus {
+      outline: none !important;
+      border: 1px solid rgb(255, 255, 0);
+    }
   }
-}
 }

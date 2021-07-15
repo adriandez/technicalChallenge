@@ -29,6 +29,7 @@ const routes = {
       console.log(err);
     }
   },
+  //Seed database function
   seed: (req, res) => {
     try {
       manufacts.forEach((manuf) => {
