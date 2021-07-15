@@ -1,25 +1,40 @@
-$color-primary: #000000;
-$color-primary-light: #c9c9c9;
-$color-primary-dark: #000000;
-$color-bg: #ffffff;
-$color-type-light: #dddddd;
-
-
-button,
-input[type="submit"] {
-  justify-self: flex-end;
-  align-self: flex-start;
-  background: $color-primary;
-
-  border: none;
-  color: rgb(255, 255, 255);
-}
 
 input[type="text"] {
+  width: 95%;
   background: white;
   padding: 6px;
-  color: $color-bg;
+  color: black;
   &::placeholder {
     color: black;
   }
+}
+
+$viewport-phone: 300px;
+$viewport-tablet: 564px;
+$viewport-desktop: 960px;
+
+
+
+@media screen and (min-width: $viewport-tablet + 1px) and (max-width: $viewport-desktop - 1px) {
+input[type="text"] {
+  width: 97%;
+  background: white;
+  padding: 6px;
+  color: black;
+  &::placeholder {
+    color: black;
+  }
+}
+}
+
+@media screen and (min-width: $viewport-desktop + 1) {
+input[type="text"] {
+  width: 99%;
+  background: white;
+  padding: 6px;
+  color: black;
+  &::placeholder {
+    color: black;
+  }
+}
 }

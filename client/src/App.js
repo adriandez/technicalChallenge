@@ -7,10 +7,10 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Top />
-      <Header />
-      <Main />
-      <Footer />
+        <Top />
+        <Header />
+        <Main />
+        <Footer />
     </div>
   );
 }

@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const useAxios = (url) => {
-  const [result, setResult] = useState();
+const useAxiosDetail = (url) => {
+  const [resultDetail, setResultDetail] = useState();
 
   useEffect(() => {
     const getResponse = async (url) => {
         const response = await axios.get(url);
-        setResult(response.data);
+        setResultDetail(response.data);
     };
     if (url !== "") getResponse(url);
   }, [url]);
-  return {result}
+  return {resultDetail}
 };
 
-export default useAxios;
+export default useAxiosDetail;

@@ -3,7 +3,12 @@ const { manufacts, items } = require("../models/seed");
 
 const routes = {
   getList: async (req, res) => {
-    const response = await item.findAll()
+    const response = await item.findAll();
+    console.log(response);
+    res.status(200).json(response);
+  },
+  getDetail: async (req, res) => {
+    const response = await manufact.findOne({ where: req.params });
     console.log(response);
     res.status(200).json(response);
   },
