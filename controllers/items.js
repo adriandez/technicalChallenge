@@ -8,7 +8,9 @@ const routes = {
     res.status(200).json(response);
   },
   getDetail: async (req, res) => {
-    console.log(req.params);
+    const response = await manufact.findOne({ where: req.params });
+    console.log(response);
+    res.status(200).json(response);
   },
   seed: (req, res) => {
     manufacts.forEach((manuf) => {

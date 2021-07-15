@@ -14,11 +14,11 @@ import {
 import "./Table.scss";
 import { GlobalFilter } from "./GlobalFilter";
 import StarRating from "../../../components/Relevance";
-import { Link } from "react-router-dom";
+
 
 import useAxios from "../../../hooks/useAxios";
+import useAxiosDetail from "../../../hooks/useAxiosDetail";
 
-import Manufact from "../../Manufact";
 
 const Table = () => {
   // eslint-disable-next-line
@@ -26,14 +26,8 @@ const Table = () => {
   
   // eslint-disable-next-line
   const { result } = useAxios(url);
-
   const [dataTable, setDataTable] = useState([]);
-
-
   const [cellValue, setCellValue] = useState("");
-
-  console.log(cellValue);
-  
 
   useEffect(() => {
     if (result) {
@@ -43,17 +37,37 @@ const Table = () => {
   }, [result]);
 
   const getCellValue = (cell) => {
-     setCellValue(cell.value);
-   };
+    setCellValue(cell.value);
+  };
 
-  const [url2, setUrl2] = useState();
+  const [url2, setUrl2] = useState("");
 
-   useEffect(() => {
-      setUrl2(`/api/detail/${cellValue}`);
-      
-   }, [cellValue]);
+  console.log(url2);
 
-console.log(url2);
+  const { resultDetail } = useAxiosDetail(url2);
+
+  useEffect(() => {
+    console.log(resultDetail);
+  }, [resultDetail]);
+
+  useEffect(() => {
+    if (cellValue) {
+      console.log(cellValue);
+      let filteredCif = result.filter(e => e.name === cellValue)
+      setUrl2(`/api/detail/${filteredCif[0].cif}`);
+    }
+  }, [cellValue]);
+
+  const printDetail = () =>
+    resultDetail ? (
+      <p>
+        Manufacterer: {resultDetail.name} <br />
+        Cif: {resultDetail.cif} <br />
+        Address: {resultDetail.address}
+      </p>
+    ) : (
+      ""
+    );
 
   const COLUMNS = [
     {
@@ -105,6 +119,7 @@ console.log(url2);
     <div className="div-table">
       <>
         <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+        <div className="detail">{printDetail()}</div>
         <table className="classTable" {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (

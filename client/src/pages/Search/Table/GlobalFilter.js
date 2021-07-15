@@ -17,6 +17,7 @@ export const GlobalFilter = ({ filter, setFilter }) => {
         }}
         placeholder="Filter by product info"
       />
+      
     </span>
   );
 };
