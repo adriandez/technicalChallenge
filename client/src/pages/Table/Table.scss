@@ -1,0 +1,60 @@
+Table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  > thead > tr {
+  > th:nth-child(1) > span > svg {
+  font-size: x-small;
+  }
+  > th:nth-child(2) > span > svg {
+  font-size: x-small;
+  }
+  > th:nth-child(3) > span > svg {
+  font-size: x-small;
+  }
+}
+}
+
+Table td, Table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+Table tr:nth-child(even){background-color: #f2f2f2;}
+
+Table tr:hover {background-color: #ddd;}
+
+Table th, tfoot td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+}
+
+.pre-page-nxt {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  > svg:nth-child(1) {
+    margin-right: 50px;
+  }
+  > svg:nth-child(3) {
+    margin-left: 50px;
+  }
+  > span {
+    font-size:x-small;
+  }
+}
+
+.MuiSvgIcon-root sort {
+  font-size: 5px;
+}
+
+#root > div > main > section > div > span {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
