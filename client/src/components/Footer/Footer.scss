@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20px;
-
-  position: fixed;
-  bottom: 0;
+  min-height: 40px;
   background: red;
   width: 100%;
-
 }
+
+$viewport-phone: 300px;
+$viewport-tablet: 564px;
+$viewport-desktop: 960px;
+

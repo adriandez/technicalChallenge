@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useAxiosDetail = (url) => {
-  console.log(url);
   const [resultDetail, setResultDetail] = useState();
 
   useEffect(() => {

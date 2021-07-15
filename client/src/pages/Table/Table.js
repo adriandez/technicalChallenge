@@ -9,29 +9,32 @@ import {
   useGlobalFilter,
   usePagination,
   useExpanded,
+  useAsyncDebounce,
 } from "react-table";
 
 import "./Table.scss";
-import { GlobalFilter } from "./GlobalFilter";
-import StarRating from "../../../components/Relevance";
+import { GlobalFilter } from "../../util/GlobalFilter";
+import StarRating from "../../util/Relevance";
 
-
-import useAxios from "../../../hooks/useAxios";
-import useAxiosDetail from "../../../hooks/useAxiosDetail";
-
+import useAxios from "../../hooks/useAxios";
+import useAxiosDetail from "../../hooks/useAxiosDetail";
+import useAxiosFilter from "../../hooks/useAxiosFilter";
 
 const Table = () => {
-  // eslint-disable-next-line
-  const [url, setUrl] = useState("/api");
-  
-  // eslint-disable-next-line
+  const [url, setUrl] = useState("");
   const { result } = useAxios(url);
   const [dataTable, setDataTable] = useState([]);
+  const [dataTable2, setDataTable2] = useState([]);
   const [cellValue, setCellValue] = useState("");
+
+  const tableURL = (apiUrl) => setUrl(apiUrl);
+
+  useEffect(() => {
+    tableURL("/api");
+  }, []);
 
   useEffect(() => {
     if (result) {
-      console.log(result);
       setDataTable(result);
     }
   }, [result]);
@@ -41,27 +44,20 @@ const Table = () => {
   };
 
   const [url2, setUrl2] = useState("");
-
-  console.log(url2);
-
   const { resultDetail } = useAxiosDetail(url2);
 
   useEffect(() => {
-    console.log(resultDetail);
-  }, [resultDetail]);
-
-  useEffect(() => {
     if (cellValue) {
-      console.log(cellValue);
-      let filteredCif = result.filter(e => e.name === cellValue)
+      let filteredCif = result.filter((e) => e.name === cellValue);
       setUrl2(`/api/detail/${filteredCif[0].cif}`);
     }
+    // eslint-disable-next-line
   }, [cellValue]);
 
   const printDetail = () =>
     resultDetail ? (
       <p>
-        Manufacterer: {resultDetail.name} <br />
+        Manufacturer: {resultDetail.name} <br />
         Cif: {resultDetail.cif} <br />
         Address: {resultDetail.address}
       </p>
@@ -89,7 +85,7 @@ const Table = () => {
 
   // eslint-disable-next-line
   const columns = useMemo(() => COLUMNS, []);
-  const data = useMemo(() => dataTable, [dataTable]);
+  const data = useMemo(() => dataTable2 || dataTable, [dataTable, dataTable2]);
 
   const {
     getTableProps,
@@ -115,10 +111,48 @@ const Table = () => {
 
   const { globalFilter, pageIndex } = state;
 
+  const [filter, setFilter] = useState();
+  const [value, setValue] = useState(filter);
+
+  const onChange = useAsyncDebounce((value) => {
+    if (value) {
+      setFilter(value);
+    } else {
+      setDataTable2(undefined);
+    }
+  }, 1000);
+
+  const [url3, setUrl3] = useState("");
+  const { resultFilter } = useAxiosFilter(url3);
+
+  useEffect(() => {
+    setDataTable2(resultFilter);
+  }, [resultFilter]);
+
+  useEffect(() => {
+    if (filter) {
+      setUrl3(`/api/filter/${filter}`);
+    }
+    // eslint-disable-next-line
+  }, [filter]);
+
   return (
     <div className="div-table">
       <>
-        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+        <div className="inputSearch">
+          <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+          <div>
+            <input
+              type="text"
+              value={value || ""}
+              placeholder="Filter by manufacterer"
+              onChange={(e) => {
+                setValue(e.target.value);
+                onChange(e.target.value);
+              }}
+            />
+          </div>
+        </div>
         <div className="detail">{printDetail()}</div>
         <table className="classTable" {...getTableProps()}>
           <thead>

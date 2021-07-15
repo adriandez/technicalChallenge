@@ -1,6 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
-import { GlobalProvider } from "./context/GlobalContext"
-
 import Top from "../src/components/Top";
 import Header from "../src/components/Header";
 import Main from "../src/components/Main";
@@ -10,14 +7,10 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <GlobalProvider>
         <Top />
         <Header />
-        <BrowserRouter>
-          <Main />
-        </BrowserRouter>
+        <Main />
         <Footer />
-      </GlobalProvider>
     </div>
   );
 }
