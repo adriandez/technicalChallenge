@@ -1,8 +1,4 @@
 import React, { useMemo, useState, useEffect } from "react";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-import SortIcon from "@material-ui/icons/Sort";
-
 import {
   useTable,
   useSortBy,
@@ -12,21 +8,25 @@ import {
   useAsyncDebounce,
 } from "react-table";
 
-import "./Table.scss";
 import { GlobalFilter } from "../../util/GlobalFilter";
 import StarRating from "../../util/Relevance";
-
 import useAxios from "../../hooks/useAxios";
 import useAxiosDetail from "../../hooks/useAxiosDetail";
 import useAxiosFilter from "../../hooks/useAxiosFilter";
 
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import SortIcon from "@material-ui/icons/Sort";
+
+import "./Table.scss";
+
 const Table = () => {
+
   const [url, setUrl] = useState("");
   const { result } = useAxios(url);
   const [dataTable, setDataTable] = useState([]);
   const [dataTable2, setDataTable2] = useState([]);
   const [cellValue, setCellValue] = useState("");
-
   const tableURL = (apiUrl) => setUrl(apiUrl);
 
   useEffect(() => {
