@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
+  min-height: 50px;
+  position: bottom;
   background: red;
   width: 100%;
 }
@@ -10,4 +11,3 @@
 $viewport-phone: 300px;
 $viewport-tablet: 564px;
 $viewport-desktop: 960px;
-
