@@ -19,13 +19,13 @@ app.use(cors());
 
 app.use("/api", routerApi); // rutas para API
 // error 404 y 500
-app.use((req, res, next) =>{
-    console.log("error404");
-    return res.status(404).json({message: "Route does not exist"})
+app.use((req, res, next) => {
+  console.log("error404");
+  return res.status(404).json({ message: "Route does not exist" });
 });
-app.use((err, req, res, next) =>{
-    console.log("error500");
-    return res.status(500).json({message: `Server ${err}`})
+app.use((err, req, res, next) => {
+  console.log("error500");
+  return res.status(500).json({ message: `Server ${err}` });
 });
 
 // Conexion a base de datos
