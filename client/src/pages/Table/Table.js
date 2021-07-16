@@ -40,7 +40,7 @@ const Table = () => {
   }, [result]);
 
   const getCellValue = (cell) => {
-    setCellValue(cell.value);
+    if (typeof cell.value !== "number") setCellValue(cell.value);
   };
 
   const [url2, setUrl2] = useState("");
